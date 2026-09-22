@@ -2,10 +2,8 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { useData } from '../lib/DataContext';
-import { requireAuth } from '../lib/requireAuth';
 import { fmtDateTime } from '../lib/format';
 
-export const getServerSideProps = requireAuth;
 
 export default function Rates() {
   const { data, loading, update } = useData();

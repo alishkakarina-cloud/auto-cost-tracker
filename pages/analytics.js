@@ -3,10 +3,8 @@ import Layout from '../components/Layout';
 import KpiCard from '../components/KpiCard';
 import BarChart from '../components/BarChart';
 import { useData } from '../lib/DataContext';
-import { requireAuth } from '../lib/requireAuth';
 import { fmt, toUsd } from '../lib/format';
 
-export const getServerSideProps = requireAuth;
 
 function monthKey(d) {
   const dt = new Date(d);

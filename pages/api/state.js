@@ -1,12 +1,6 @@
-import { isAuthenticated } from '../../lib/auth';
 import { readState, writeState } from '../../lib/store';
 
 export default async function handler(req, res) {
-  if (!isAuthenticated(req)) {
-    res.status(401).json({ error: 'unauthorized' });
-    return;
-  }
-
   if (req.method === 'GET') {
     const state = await readState();
     res.status(200).json(state);

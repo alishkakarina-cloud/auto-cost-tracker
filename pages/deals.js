@@ -2,11 +2,9 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { useData } from '../lib/DataContext';
-import { requireAuth } from '../lib/requireAuth';
 import { fmt, fmtDate, toUsd } from '../lib/format';
 import { makeId } from '../lib/id';
 
-export const getServerSideProps = requireAuth;
 
 const EMPTY = {
   carId: '',

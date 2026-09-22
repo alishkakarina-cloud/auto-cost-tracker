@@ -4,10 +4,8 @@ import Layout from '../components/Layout';
 import KpiCard from '../components/KpiCard';
 import BarChart from '../components/BarChart';
 import { useData } from '../lib/DataContext';
-import { requireAuth } from '../lib/requireAuth';
 import { fmt, fmtDateTime } from '../lib/format';
 
-export const getServerSideProps = requireAuth;
 
 const HUB_TILES = [
   { href: '/calculator', icon: '🧮', label: 'Калькулятор' },

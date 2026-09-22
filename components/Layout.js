@@ -14,11 +14,6 @@ export default function Layout({ title, children }) {
   const router = useRouter();
   const { saving } = useData();
 
-  async function logout() {
-    await fetch('/api/logout', { method: 'POST' });
-    router.push('/login');
-  }
-
   return (
     <div className="app">
       <header className="header">
@@ -28,7 +23,6 @@ export default function Layout({ title, children }) {
           </Link>
           <div className="header-actions">
             {saving && <span className="saving-dot" title="Сохранение...">●</span>}
-            <button className="btn-link" onClick={logout}>Выйти</button>
           </div>
         </div>
         {title && <h1 className="page-title">{title}</h1>}
